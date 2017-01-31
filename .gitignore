@@ -240,3 +240,4 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/game mechanics/gameMechanics_Base/nbproject/private/
