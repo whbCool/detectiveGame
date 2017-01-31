@@ -10,10 +10,8 @@ package gamemechanics_base;
  * @author bobjoe (Will D.)
  * 
  * follow me on twitter lol @itsbCool
- * 
- * OFFICIAL START PAGE: Project by William Dinkins, Ryan Toomer, and Joseph Funches.
  */
-public class gameMechanics_Base {
+public class GameMechanics_Base {
 
     /**
      * @param args the command line arguments
