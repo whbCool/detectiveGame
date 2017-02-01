@@ -11,6 +11,7 @@ package animationmechanics_base;
  * 
  * import spritework here
  * 
+ * animation engine goes here
  */
 public class AnimationMechanics_base {
 
@@ -19,6 +20,12 @@ public class AnimationMechanics_base {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    }
-    
 }
+    public AnimationMechanics_base() {
+        //import folder structures
+        //import sprite artwork
+        //look at ryan's link that he sent you dumbo
+        //function to run the animations
+        //function to switch between 4 directions
+        //fucntion to change direction
+    }
