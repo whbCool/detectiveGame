@@ -72,7 +72,7 @@ public class animationMechanics_animation {
             throw new RuntimeException("Bad duration:" + duration);
         }
         
-        frames.add(new Frame(frame, duration));
+        frames.add(new animationMechanics_frame(frame, duration));
         frame_current = 0;
     }
     
