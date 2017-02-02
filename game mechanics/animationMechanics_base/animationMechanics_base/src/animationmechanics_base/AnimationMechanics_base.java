@@ -5,6 +5,11 @@
  */
 package animationmechanics_base;
 
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
+
 /**
  *
  * @author bobjoe
@@ -15,17 +20,28 @@ package animationmechanics_base;
  */
 public class AnimationMechanics_base {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-}
-    public AnimationMechanics_base() {
-        //import folder structures
-        //import sprite artwork
-        //look at ryan's link that he sent you dumbo
-        //function to run the animations
-        //function to switch between 4 directions
-        //fucntion to change direction
+    private static BufferedImage spriteSheet;
+    private static final int TILE_SIZE = 4;
+    
+    public static BufferedImage loadSpriteUP(String file) {
+        
+        BufferedImage sprite = null;
+        
+        try {
+            sprite = ImageIO.read(new File ("/" + file + ".png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        
+        return sprite;
     }
+    
+    public static BufferedImage getSprite(int xGrid, int yGrid) {
+        
+        if (spriteSheet == null) {
+            spriteSheet = loadSpriteUP("AnimationSpriteSheet");
+        }
+        
+        return spriteSheet.getSubimage(xGrid * TILE_SIZE, yGrid * TILE_SIZE, TILE_SIZE, TILE_SIZE);
+    }
+}
